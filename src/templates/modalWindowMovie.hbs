@@ -1,0 +1,53 @@
+<div class='modal'>
+  <div class='modal-window'>
+    <button type='button' class='modal__close' data-action='modal-close'>
+      <svg class='modal__icon' width='30' height='30'>
+        <use href='sprite.svg#icon-close'></use>
+      </svg>
+    </button>
+    <div class='modal__content-wrapper'>
+      <div class='movie__content-image'>
+        <img
+          src='{{posterUrl}}'
+          alt={{title}}
+          class='movie__poster'
+        />
+      </div>
+      <div class='movie__content'>
+        <h2 class='movie-name'>{{title}}</h2>
+      <table class="properties">
+        <tr>
+          <td class='property-item'>Vote/Votes</td>
+          <td class='value-item'><span class='movie__vote'>{{vote_average}}</span>
+           /<span class='movie__vote movie__vote--light'>{{vote_count}}</span>
+           </td>
+        </tr>
+        <tr>
+          <td class='property-item'>Popularity</td>
+          <td class='value-item'>{{popularity}}</td>
+        </tr>
+        <tr>
+          <td class='property-item'>Original Title</td>
+          <td class='value-item origina-title-item'>{{original_title}}</td>
+        </tr>
+        <tr>
+          <td class='property-item'>Genre</td>
+          <td class='value-item genre'>{{fullGenresList}}</td>
+        </tr>
+      </table>
+
+        <div class='movie__about-div'>
+        <h3 class='movie__about-header'>About</h3>
+        <button type='button' class='movie__button-trailer hidden-button'>show trailer</button>
+      </div>
+      <p class='movie__about'>{{overview}}</p>
+      <div class='movie__buttons'>
+        <button type='button' class='movie__btn' data-action='add-to-watched'>Add wo Watched</button>
+        <button type='button' class='movie__btn' data-action='add-to-queue'>Add to queue</button>
+      </div>
+    </div>
+  </div>
+    <h3 class='s-title'>Similar movies:</h3>
+    <div class='similar'>
+    </div>
+</div>

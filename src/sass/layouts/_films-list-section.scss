@@ -1,0 +1,46 @@
+.films {
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  @include for-tablet-up {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+}
+
+.films__list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+
+  @include for-tablet-up {
+    @include elements-set;
+    flex-direction: row;
+  }
+}
+
+.films__list-item {
+  @include for-phone-only {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    width: 100%;
+  }
+
+  @include for-tablet-up {
+    width: 294px;
+    @include element;
+  }
+
+  @include for-desktop-up {
+    width: 274px;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}

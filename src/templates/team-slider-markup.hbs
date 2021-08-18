@@ -1,0 +1,46 @@
+  <ul class="slider__inner-wrapper list">
+    {{#each this}}
+    <li class="slide">
+      <article class="footer-modal__card card">
+        <div class="card__team-info">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="
+                          {{photoUrl}}-desktop.jpg    1x,
+                          {{photoUrl}}@2x-desktop.jpg 2x
+                        " />
+            <source media="(min-width: 768px)" srcset="
+                          {{photoUrl}}-tablet.jpg    1x,
+                          {{photoUrl}}@2x-tablet.jpg 2x
+                        " />
+            <img  class="card__photo" srcset="
+                          {{photoUrl}}-mobile.jpg    1x,
+                          {{photoUrl}}@2x-mobile.jpg 2x
+                        " src="{{photoUrl}}-desktop.jpg" alt="{{fullName}}" />
+          </picture>
+          <p class="card__name">
+            <a href="{{githubUrl}}" target="_blank" rel="noopener noreferrer"><svg
+                class="card__icon" width="24" height="22">
+                <use href="sprite.svg#icon-github"></use>
+              </svg></a>{{fullName}}
+          </p>
+          <p class="card__city">{{city}}</p>
+        </div>
+        <div class="card__work-info">
+          <p class="card__role">{{role}}</p>
+          <p class="card__text">
+            {{text}}
+          </p>
+        </div>
+      </article>
+    </li>
+    {{/each}}
+  </ul>
+  <div class="slider__dots-wrapper">
+    <ul class="slider__dots list">
+      {{#each this}}
+      <li class="slider__dot">
+        <img src="{{photoUrl}}-tablet.jpg" class="slider__dot-photo" width="40" alt="{{fullName}}" />
+      </li>
+      {{/each}}
+    </ul>
+  </div>

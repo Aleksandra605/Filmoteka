@@ -1,0 +1,109 @@
+.one-card {
+  position: relative;
+  overflow: hidden;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+  &__img {
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  &__box-img {
+    margin-bottom: 10px;
+    @include for-phone-only {
+      max-width: 440px;
+    }
+    @include for-tablet-up {
+      width: 294px;
+      height: 398px;
+    }
+    @include for-desktop-up {
+      width: 274px;
+      height: 398px;
+    }
+  }
+  &__title-box {
+    @include for-phone-only {
+      max-width: 440px;
+    }
+    @include for-tablet-up {
+      width: 294px;
+    }
+    @include for-desktop-up {
+      width: 274px;
+    }
+  }
+  &__title {
+    display: block;
+    width: inherit;
+    color: $main-text-color;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    text-transform: uppercase;
+  }
+  &__description {
+    margin-right: 10px;
+    display: block;
+    color: $accent-color;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+  }
+  &__box-description {
+    display: flex;
+    justify-content: start;
+  }
+  &__average {
+    @include flex-centered;
+    width: 36px;
+    height: 16px;
+    color: $accent-text-color;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    background-color: $accent-color;
+    border-radius: 5px;
+  }
+}
+.one-card_overlay {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  background-color: $header-background-color;
+  transition: transform $animation-time $animation-function;
+  @include for-phone-only {
+    justify-content: center;
+  }
+}
+.one-card:focus .one-card_overlay,
+.one-card:hover .one-card_overlay {
+  transform: translateY(100%);
+}
+.btn_one-card {
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid black;
+  @include for-phone-only {
+    margin-left: 15px;
+  }
+}
+.btn_one-card:focus,
+.btn_one-card:hover {
+  background-color: $accent-color;
+  color: $accent-text-color;
+  cursor: pointer;
+  border-color: $accent-color;
+}

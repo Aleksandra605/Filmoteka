@@ -1,0 +1,308 @@
+.header-section {
+  width: 100%;
+  height: 230px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-header_img {
+  display: block;
+  background-image: linear-gradient(to top left, $header-background-color, $header-background-color),
+    url('./../images/headerbg/bgimg.jpg');
+
+  @media screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to top left,
+        $header-background-color,
+        $header-background-color
+      ),
+      url('./../images/headerbg/bgimg@2x.jpg');
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+    background-image: linear-gradient(
+        to top left,
+        $header-background-color,
+        $header-background-color
+      ),
+      url('./../images/headerbg/bgimg760.jpg');
+  }
+
+  @media screen and (min-resolution: 2dppx) and (min-width: $mobile-width) and (max-width: $tablet-width) {
+    background-image: linear-gradient(
+        to top left,
+        $header-background-color,
+        $header-background-color
+      ),
+      url('./../images/headerbg/bgimg760@2x.jpg');
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    background-image: linear-gradient(
+        to top left,
+        $header-background-color,
+        $header-background-color
+      ),
+      url('./../images/headerbg/bgimg1024.jpg');
+  }
+
+  @media screen and (min-resolution: 2dppx) and (min-width: $tablet-width) {
+    background-image: inear-gradient(
+        to top left,
+        $header-background-color,
+        $header-background-color
+      ),
+      url('./../images/headerbg/bgimg1024.jpg');
+  }
+}
+
+.library-header_img {
+  background-image: linear-gradient(to top left, $header-background-color, $header-background-color),
+    url('./../images/headerbg/libraryimg.jpg');
+
+  @media screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to top left,
+        $header-background-color,
+        $header-background-color
+      ),
+      url('./../images/headerbg/libraryimg@2x.jpg');
+  }
+
+  @media screen and (min-width: $mobile-width) and (max-width: $tablet-width) {
+    background-image: linear-gradient(
+        to top left,
+        $header-background-color,
+        $header-background-color
+      ),
+      url('./../images/headerbg/libraryimg760.jpg');
+  }
+
+  @media screen and (min-resolution: 2dppx) and (min-width: $mobile-width) and (max-width: $tablet-width) {
+    background-image: linear-gradient(
+        to top left,
+        $header-background-color,
+        $header-background-color
+      ),
+      url('./../images/headerbg/libraryimg760@2x.jpg');
+  }
+
+  @media screen and (min-width: $tablet-width) {
+    background-image: linear-gradient(
+        to top left,
+        $header-background-color,
+        $header-background-color
+      ),
+      url('./../images/headerbg/libraryimg1024.jpg');
+  }
+
+  @media screen and (min-resolution: 2dppx) and (min-width: $tablet-width) {
+    background-image: linear-gradient(
+        to top left,
+        $header-background-color,
+        $header-background-color
+      ),
+      url('./../images/headerbg/libraryimg1024@2x.jpg');
+  }
+}
+
+.page-header {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 48px;
+
+  @include for-phone-up {
+    padding-right: 71px;
+    padding-left: 71px;
+  }
+}
+
+.page-title {
+  color: $accent-text-color;
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: normal;
+
+  @include for-phone-only {
+    display: none;
+  }
+}
+
+.page-nav_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 35px;
+
+  @include for-responsive-only {
+    align-items: flex-end;
+  }
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  h1 {
+    margin-left: 12px;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      transition: $animation-time $animation-function;
+      transition-property: color;
+    }
+  }
+}
+
+.logo-icon {
+  stroke: #818181;
+
+  @include for-phone-only {
+    &:hover,
+    &:focus {
+      stroke: $accent-color;
+      transition: get-transition-prop(stroke);
+    }
+  }
+}
+
+.page-nav_wrapper {
+  color: $header-text-color;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+
+  display: flex;
+
+  li {
+    list-style-type: none;
+    margin-left: 39px;
+  }
+}
+
+.nav-el_button {
+  color: $accent-text-color;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-size: 14px;
+  border: none;
+  display: block;
+}
+
+.nav-el {
+  position: relative;
+  padding-bottom: 2px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $accent-color;
+    transition: get-transition-prop(color);
+  }
+}
+
+.active-page {
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $accent-color;
+  }
+}
+
+.header__search-form {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 336px;
+
+  input {
+    font-size: 14px;
+    color: $accent-text-color;
+    padding-bottom: 3px;
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid $accent-text-color;
+    width: 100%;
+
+    &::placeholder {
+      color: $accent-text-color;
+      border: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: rgba(24, 24, 24, 0.8);
+      outline: none;
+      border-bottom: none;
+    }
+  }
+
+  .button-search {
+    position: absolute;
+    right: 3px;
+    top: 2px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+/*  my library-page style */
+
+.library-header__button-container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+  li {
+    display: block;
+
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+}
+
+.library-button {
+  color: $accent-text-color;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-size: 12px;
+
+  padding: 14px 37px 12px;
+  min-width: 130px;
+  border: 0.5px solid $accent-text-color;
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    border: none;
+    -webkit-box-shadow: 1px 1px 36px -3px rgba(255, 107, 1, 0.82);
+    box-shadow: 1px 1px 36px -3px rgba(255, 107, 1, 0.82);
+  }
+
+  @include for-phone-up {
+    width: 136px;
+  }
+}
+
+.library-button_active {
+  background-color: $accent-color;
+  border: none;
+  -webkit-box-shadow: 1px 1px 36px -3px rgba(255, 107, 1, 0.82);
+  box-shadow: 1px 1px 36px -3px rgba(255, 107, 1, 0.82);
+}
