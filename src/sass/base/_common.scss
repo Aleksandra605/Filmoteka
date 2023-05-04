@@ -49,3 +49,37 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.232);
+  border: 0px none;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 107, 1);
+}
+::-webkit-scrollbar-thumb:active {
+  background: rgb(255, 107, 1);
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.044);
+  border: 0px none rgba(255, 255, 255, 0.07);
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: rgba(255, 255, 255, 0.388);
+}
+::-webkit-scrollbar-track:active {
+  background: rgba(255, 255, 255, 0.388);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
